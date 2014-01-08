@@ -16,6 +16,7 @@ end
 group :test do
 gem 'selenium-webdriver'
 gem 'capybara'
+gem 'factory_girl_rails'
 end
 
 # Use SCSS for stylesheets
@@ -43,9 +44,6 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
