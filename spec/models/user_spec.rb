@@ -18,6 +18,11 @@ describe User do
   it { should respond_to(:authenticate) }
   it { should be_valid }
 
+  describe "remember taken" do
+    before { @user.save }
+    its(:remember_token) { should_not be_blank }
+  end
+
   describe "with a password that's too short" do
     before { @user.password = @user.password_confirmation = "a" * 5 }
     it { should be_invalid }
